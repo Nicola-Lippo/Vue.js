@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>intro vue</title>
+</head>
+
+<body>
+    <div id="app">
+        <!--testo + {{}}-->
+        <div>Questo è il mio {{text}}</div>
+        <hr>
+        <!--V-model-->
+        <label for="inputone">Prova con V-model</label>
+        <input type="text" id="inputone" v-model="proveOne">
+        <div>{{proveOne}}</div>
+        <hr>
+        <!--V-bind-->
+        <div class="bind">Prova con V-bind</div>
+        <div v-bind:class="bind" class="bind">Prova con V-bind cambiare font-size forma estesa</div>
+        <div :class="bind" class="bind">Prova con V-bind cambiare font-size forma contratta</div>
+        <hr>
+        <!--V-bind con select-->
+        <div :class="color">{{proveOne}} con la select</div>
+        <select v-model="color">
+            <option value="red">red</option>
+            <option value="blu">blu</option>
+            <option value="green">green</option>
+        </select>
+        <hr>
+        <!--function + event-->
+        <div>il messaggio della funziona è "{{firstFunction}}"</div>
+        <button @click="functionClick()">click</button>
+        <button v-on:click="functionClick()">click</button>
+    </div>
+    <!--Vue.js-->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!--My js-->
+    <script type="text/javascript" src="main.js"></script>
+</body>
+
+</html>
