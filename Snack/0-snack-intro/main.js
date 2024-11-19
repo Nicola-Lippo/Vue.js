@@ -6,7 +6,7 @@ createApp({
     data() {
         return {
             text: 'Immagine di una donna con uno strano cappello',
-            //salvo idati della foto
+            //salvo i dati della foto
             img: {
                 src: 'img/img_0.png',
                 alt: 'foto'
