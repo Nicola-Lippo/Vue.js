@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--my css-->
+    <link rel="stylesheet" href="style.css">
+    <title>Istruzioni condizionali e Cicli</title>
+</head>
+
+<body>
+    <!-- v-cloak utilizzato per nascondere il modello non compilato finché non è pronto-->
+    <div id="app" v-cloak>
+        <h2>{{title}}</h2>
+        <div>
+            <h4>V-if</h4>
+            <!--valore Booleano-->
+            <!--differenza ispezionando elementi html-->
+            <div v-if="true">prova v-if 1</div>
+            <div v-if="false">prova v-if 2</div>
+            <!--elemento del data-->
+            <div v-if="vIf">prova v-if 3, data</div>
+            <!--function-->
+            <div v-if="functionIf()">prova v-if 4, function</div>
+        </div>
+        <hr>
+        <div>
+            <h4>V-else</h4>
+            <div v-if="false">non sarò mai visualizzato</div>
+            <div v-else>sostituisco il v-if con v-else</div>
+        </div>
+        <hr>
+        <div>
+            <h4>V-else-if</h4>
+            <div v-if="type === 'A'">A</div>
+            <div v-else-if="type === 'B'">B</div>
+            <div v-else-if="type === 'C'">C</div>
+            <div v-else>Not A/B/C</div>
+            <!--select con v-model-->
+            <label for="select">seleziona le opzioni</label>
+            <select name="" id="select" v-model="type">
+                <option value="A">A</option>
+                <option value="B">B</option>
+                <option value="C">C</option>
+                <option value="/">/</option>
+            </select>
+        </div>
+        <hr>
+        <div>
+            <!--aggiunge display none-->
+            <h4>V-else-if</h4>
+            <div v-show="true">mostrato in pagina con v-show</div>
+        </div>
+        <hr>
+        <div>
+            <h4>V-for</h4>
+            <h6>array</h6>
+            <div v-for="animal in animals">{{animal}}</div>
+            <h6>array di oggeti</h6>
+            <div v-for="animal2 in animals2">
+                <div>{{animal2.nome}}</div>
+                <p>{{animal2.tipo}}</p>
+            </div>
+            <h6>contatore numerico</h6>
+            <div v-for="i in number" v-show="i % 2 !== 0">{{`numero ${i}`}}</div>
+        </div>
+        <!--Vue.js-->
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        <!--My js-->
+        <script type="text/javascript" src="main.js"></script>
+</body>
+
+</html>

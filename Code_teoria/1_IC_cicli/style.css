@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+hr {
+    margin: 10px;
+}
+
+h6 {
+    margin: 5px 0;
+}
+
+/*ID*/
+#app {
+    padding: 25px;
+}
+
+/*selettore per attributo*/
+[v-cloak] {
+    display: none;
+}

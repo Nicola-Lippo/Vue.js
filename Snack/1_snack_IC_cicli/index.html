@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--my css-->
+    <link rel="stylesheet" href="style.css">
+    <title>snack IC e Cicli</title>
+</head>
+
+<body>
+    <div id="app">
+        <div class="container">
+            <h2>{{title}}</h2>
+            <!--campi di Input-->
+            <div class="input">
+                <label for="new-text">Insrisci un Todo</label>
+                <!--Bonus 1; @ direttamente nell' input-->
+                <input type="text" id="new-text" v-model="newTodo" @keyup.enter="addTodo()">
+                <button class="add" @click="addTodo()">add</button>
+            </div>
+            <!--Lista Todo-->
+            <div>
+                <div class="todo d-flex" v-for="(element, index) in myArray">
+                    <span @click="invertTodo(index)" :class="{todoDone: element.done === false}">{{element.text}}</span>
+                    <button class="remove" @click="remuveTodo(index)">x</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Vue.js-->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!--My js-->
+    <script type="text/javascript" src="main.js"></script>
+</body>
+
+</html>
