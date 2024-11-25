@@ -26,3 +26,5 @@ methods = proprietà il cui valore è un oggetto in cui potremo inserire tutte l
 v-if e il v-else devono essere elementi html consecutivi per funzionare corretamente.
 v-if e v-for non si usano insieme, v-if sostituito da v-show
 v-for = singolare in nomeArray = {{}}
+
+NB:per rendere univoco un ciclo v-for utiliziamo una :key

@@ -20,10 +20,15 @@
                 <input type="text" id="new-text" v-model="newTodo" @keyup.enter="addTodo()">
                 <button class="add" @click="addTodo()">add</button>
             </div>
+            <div class="input">
+                <label for="serch-text">cerca un Todo</label>
+                <input type="text" id="serch-text" v-model="serchTodo">
+            </div>
             <!--Lista Todo-->
             <div>
-                <div class="todo d-flex" v-for="(element, index) in myArray">
-                    <span @click="invertTodo(index)" :class="{todoDone: element.done === false}">{{element.text}}</span>
+                <!--facciamo il ciclo su un return di una funzione-->
+                <div class="todo d-flex" v-for="(element, index) in viewTodo()" :key="`Todo-${index}`">
+                    <span @click="invertTodo(index)" :class="{todoDone: element.done}">{{element.text}}</span>
                     <button class="remove" @click="remuveTodo(index)">x</button>
                 </div>
             </div>

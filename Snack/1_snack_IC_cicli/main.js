@@ -20,8 +20,9 @@ const objApp = {
                 { text: 'Todo 10', done: true }
             ],
             //nuovo Todo
-            newTodo: ''
-
+            newTodo: '',
+            //serch Todo
+            serchTodo: ''
         }
     },
     methods: {
@@ -38,7 +39,7 @@ const objApp = {
             //.trim rimuove spazzi all'inizio o fine
             if (this.newTodo.trim() !== '') {
                 //Aggiunge un nuovo oggetto
-                this.myArray.push({ text: this.newTodo.trim(), done: true });
+                this.myArray.push({ text: this.newTodo.trim(), done: false });
                 //Resetta l'input
                 this.newTodo = '';
                 //console all' aggiunta
@@ -59,7 +60,18 @@ const objApp = {
                 todo.done = false;
             }
             console.log('inverto done');
-        }
+        },
+        //cerca Todo
+        //non modifichiamo l'array di partenza con filter
+        viewTodo() {
+            if (this.serchTodo) {
+                return this.myArray.filter((element) => {
+                    return element.text.includes(this.serchTodo)
+                });
+            } else {
+                return this.myArray
+            }
+        },
     }
 };
 const app = createApp(objApp);
