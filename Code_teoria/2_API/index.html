@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--my css-->
+    <link rel="stylesheet" href="style.css">
+    <title>API</title>
+</head>
+
+<body>
+    <div id="app">
+        <h2>{{title}}</h2>
+        <ul v-for="beer in beers">
+            <li>
+                <div>{{beer.name}}</div>
+                <p>{{beer.price}}</p>
+            </li>
+        </ul>
+    </div>
+    <!--Vue.js-->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!--axios-->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!--My js-->
+    <script type="text/javascript" src="main.js"></script>
+</body>
+
+</html>

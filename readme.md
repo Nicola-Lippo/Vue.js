@@ -28,3 +28,8 @@ v-if e v-for non si usano insieme, v-if sostituito da v-show
 v-for = singolare in nomeArray = {{}}
 
 NB:per rendere univoco un ciclo v-for utiliziamo una :key
+
+2) API (Application Programming Interface)
+NB: il server risponde dcon una stringa con annotzione JSON.
+Per comunicare correttamente tra loro abbiamo bisogno del file JSON(JavaScript Object Notation) JSON.parse()
+NB: axios semplifica la risposta

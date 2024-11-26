@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API</title>
+</head>
+
+<body>
+    <div id="app">
+        <h2>{{title}}</h2>
+        <ul v-if="emails.length === maxEmail">
+            <li v-for="(email, index) in emails" :key="index">
+                {{ email }}
+            </li>
+        </ul>
+        <p v-else>Sto caricando {{ maxEmail }} email...</p>
+    </div>
+    <!--Vue.js-->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!--axios-->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!--My js-->
+    <script type="text/javascript" src="main.js"></script>
+</body>
+
+</html>
