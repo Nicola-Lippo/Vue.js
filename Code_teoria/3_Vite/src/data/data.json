@@ -1,0 +1,22 @@
+[
+    {
+        "nome": "Leone",
+        "descrizione": "Re della savana, potente"
+    },
+    {
+        "nome": "Elefante",
+        "descrizione": "Grande, intelligente e maestoso"
+    },
+    {
+        "nome": "Delfino",
+        "descrizione": "Mammifero marino, molto socievole"
+    },
+    {
+        "nome": "Gufo",
+        "descrizione": "Notturno, simbolo di saggezza"
+    },
+    {
+        "nome": "Tigre",
+        "descrizione": "Predatore agile, muscoloso e forte"
+    }
+]
